@@ -28,9 +28,7 @@ class TestDistanceToLine(unittest.TestCase):
         try:
             with importlib.resources.path(testing, inputFilename) as p:
                 package_path = p
-                print(package_path)
         except AttributeError:
-            print("Cannot explain why this is failing for Python 3.9.")
             package_path = os.path.realpath(os.path.dirname(__file__))
 
         reader = inp.InpReader(os.path.join(package_path, inputFilename))
